@@ -1,0 +1,118 @@
+{
+  "timestamp": "2026-03-12T01:13:01.573306",
+  "config": {
+    "wait_until": "domcontentloaded",
+    "timeout": 60000,
+    "headless": true,
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.0"
+  },
+  "total_urls": 10,
+  "successful": 9,
+  "total_time": 25.15,
+  "avg_time": 1.8,
+  "avg_completeness": 0.744,
+  "total_score": 0.412,
+  "cycle_index": 4,
+  "results": [
+    {
+      "category": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Main_Page",
+      "success": true,
+      "time_seconds": 0.79,
+      "html_size": 230038,
+      "extracted_chars": 7034,
+      "completeness": 0.667,
+      "score": 0.844
+    },
+    {
+      "category": "arxiv_ai",
+      "url": "https://arxiv.org/list/cs.AI/recent",
+      "success": true,
+      "time_seconds": 0.37,
+      "html_size": 93378,
+      "extracted_chars": 2224,
+      "completeness": 0.667,
+      "score": 1.804
+    },
+    {
+      "category": "paperswithcode",
+      "url": "https://paperswithcode.com/",
+      "success": true,
+      "time_seconds": 1.62,
+      "html_size": 1465258,
+      "extracted_chars": 453,
+      "completeness": 0.667,
+      "score": 0.413
+    },
+    {
+      "category": "acl",
+      "url": "https://aclanthology.org/",
+      "success": true,
+      "time_seconds": 1.56,
+      "html_size": 68520,
+      "extracted_chars": 273,
+      "completeness": 0.667,
+      "score": 0.426
+    },
+    {
+      "category": "neurips",
+      "url": "https://nips.cc/",
+      "success": true,
+      "time_seconds": 4.25,
+      "html_size": 182329,
+      "extracted_chars": 2247,
+      "completeness": 0.667,
+      "score": 0.157
+    },
+    {
+      "category": "icml",
+      "url": "https://icml.cc/",
+      "success": true,
+      "time_seconds": 3.86,
+      "html_size": 115349,
+      "extracted_chars": 1761,
+      "completeness": 0.667,
+      "score": 0.173
+    },
+    {
+      "category": "sigkdd",
+      "url": "https://www.kdd.org/",
+      "success": false,
+      "error": "Page.goto: net::ERR_CONNECTION_REFUSED at https://www.kdd.org/\nCall log:\n  - navigating to \"https://www.kdd.org/\", waiting until \"domcontentloaded\"\n"
+    },
+    {
+      "category": "ieee",
+      "url": "https://ieeexplore.ieee.org/Xplore/home.jsp",
+      "success": true,
+      "time_seconds": 1.33,
+      "html_size": 144393,
+      "extracted_chars": 1872,
+      "completeness": 1.0,
+      "score": 0.754
+    },
+    {
+      "category": "stackoverflow_playwright",
+      "url": "https://stackoverflow.com/questions/tagged/playwright",
+      "success": true,
+      "time_seconds": 1.16,
+      "html_size": 325292,
+      "extracted_chars": 4619,
+      "completeness": 0.69,
+      "score": 0.595
+    },
+    {
+      "category": "github_actions",
+      "url": "https://github.com/actions",
+      "success": true,
+      "time_seconds": 1.3,
+      "html_size": 308952,
+      "extracted_chars": 372,
+      "completeness": 1.0,
+      "score": 0.772
+    }
+  ]
+}
