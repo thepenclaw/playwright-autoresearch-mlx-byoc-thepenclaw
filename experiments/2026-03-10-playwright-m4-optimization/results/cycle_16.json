@@ -1,0 +1,122 @@
+{
+  "timestamp": "2026-03-12T00:57:34.070758",
+  "config": {
+    "wait_until": "domcontentloaded",
+    "timeout": 60000,
+    "headless": true,
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.0"
+  },
+  "total_urls": 10,
+  "successful": 10,
+  "total_time": 14.45,
+  "avg_time": 1.06,
+  "avg_completeness": 0.544,
+  "total_score": 0.514,
+  "cycle_index": 3,
+  "results": [
+    {
+      "category": "nytimes",
+      "url": "https://www.nytimes.com/",
+      "success": true,
+      "time_seconds": 2.39,
+      "html_size": 1270988,
+      "extracted_chars": 1426,
+      "completeness": 0.667,
+      "score": 0.279
+    },
+    {
+      "category": "guardian",
+      "url": "https://www.theguardian.com/international",
+      "success": true,
+      "time_seconds": 2.53,
+      "html_size": 1452090,
+      "extracted_chars": 3315,
+      "completeness": 0.667,
+      "score": 0.264
+    },
+    {
+      "category": "bbc",
+      "url": "https://www.bbc.com/",
+      "success": true,
+      "time_seconds": 0.95,
+      "html_size": 478242,
+      "extracted_chars": 388,
+      "completeness": 0.772,
+      "score": 0.809
+    },
+    {
+      "category": "wsj",
+      "url": "https://www.wsj.com/",
+      "success": true,
+      "time_seconds": 0.38,
+      "html_size": 1473,
+      "extracted_chars": 0,
+      "completeness": 0.0,
+      "score": 0.0
+    },
+    {
+      "category": "reuters",
+      "url": "https://www.reuters.com/",
+      "success": true,
+      "time_seconds": 0.4,
+      "html_size": 1468,
+      "extracted_chars": 0,
+      "completeness": 0.0,
+      "score": 0.0
+    },
+    {
+      "category": "bloomberg",
+      "url": "https://www.bloomberg.com/",
+      "success": true,
+      "time_seconds": 0.53,
+      "html_size": 14073,
+      "extracted_chars": 478,
+      "completeness": 0.667,
+      "score": 1.253
+    },
+    {
+      "category": "cnn",
+      "url": "https://www.cnn.com/",
+      "success": true,
+      "time_seconds": 1.0,
+      "html_size": 4519787,
+      "extracted_chars": 3316,
+      "completeness": 0.667,
+      "score": 0.666
+    },
+    {
+      "category": "aljazeera",
+      "url": "https://www.aljazeera.com/",
+      "success": true,
+      "time_seconds": 0.73,
+      "html_size": 444243,
+      "extracted_chars": 491,
+      "completeness": 0.667,
+      "score": 0.911
+    },
+    {
+      "category": "techcrunch",
+      "url": "https://techcrunch.com/",
+      "success": true,
+      "time_seconds": 0.63,
+      "html_size": 430558,
+      "extracted_chars": 1194,
+      "completeness": 0.667,
+      "score": 1.053
+    },
+    {
+      "category": "theverge",
+      "url": "https://www.theverge.com/",
+      "success": true,
+      "time_seconds": 1.04,
+      "html_size": 960294,
+      "extracted_chars": 6528,
+      "completeness": 0.667,
+      "score": 0.643
+    }
+  ]
+}
