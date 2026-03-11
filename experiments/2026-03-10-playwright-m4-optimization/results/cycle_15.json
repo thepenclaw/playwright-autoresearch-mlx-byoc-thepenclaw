@@ -1,0 +1,118 @@
+{
+  "timestamp": "2026-03-12T00:42:17.647678",
+  "config": {
+    "wait_until": "domcontentloaded",
+    "timeout": 60000,
+    "headless": true,
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.0"
+  },
+  "total_urls": 10,
+  "successful": 9,
+  "total_time": 13.51,
+  "avg_time": 1.22,
+  "avg_completeness": 0.695,
+  "total_score": 0.57,
+  "cycle_index": 2,
+  "results": [
+    {
+      "category": "openclaw_home",
+      "url": "https://openclaw.ai/",
+      "success": true,
+      "time_seconds": 1.47,
+      "html_size": 220707,
+      "extracted_chars": 30952,
+      "completeness": 0.667,
+      "score": 0.453
+    },
+    {
+      "category": "apple",
+      "url": "https://www.apple.com/",
+      "success": true,
+      "time_seconds": 0.66,
+      "html_size": 345591,
+      "extracted_chars": 376,
+      "completeness": 0.24,
+      "score": 0.366
+    },
+    {
+      "category": "microsoft",
+      "url": "https://www.microsoft.com/",
+      "success": true,
+      "time_seconds": 2.05,
+      "html_size": 201601,
+      "extracted_chars": 887,
+      "completeness": 0.629,
+      "score": 0.307
+    },
+    {
+      "category": "google",
+      "url": "https://www.google.com/",
+      "success": true,
+      "time_seconds": 0.77,
+      "html_size": 191085,
+      "extracted_chars": 516,
+      "completeness": 0.72,
+      "score": 0.939
+    },
+    {
+      "category": "openai",
+      "url": "https://openai.com/",
+      "success": true,
+      "time_seconds": 0.65,
+      "html_size": 456278,
+      "extracted_chars": 1358,
+      "completeness": 1.0,
+      "score": 1.532
+    },
+    {
+      "category": "intel",
+      "url": "https://www.intel.com/",
+      "success": true,
+      "time_seconds": 3.01,
+      "html_size": 119615,
+      "extracted_chars": 577,
+      "completeness": 1.0,
+      "score": 0.332
+    },
+    {
+      "category": "nvidia",
+      "url": "https://www.nvidia.com/",
+      "success": true,
+      "time_seconds": 1.02,
+      "html_size": 831348,
+      "extracted_chars": 1624,
+      "completeness": 0.667,
+      "score": 0.654
+    },
+    {
+      "category": "amd",
+      "url": "https://www.amd.com/",
+      "success": false,
+      "error": "Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.amd.com/\nCall log:\n  - navigating to \"https://www.amd.com/\", waiting until \"domcontentloaded\"\n"
+    },
+    {
+      "category": "arm",
+      "url": "https://www.arm.com/",
+      "success": true,
+      "time_seconds": 0.97,
+      "html_size": 395792,
+      "extracted_chars": 3471,
+      "completeness": 0.667,
+      "score": 0.688
+    },
+    {
+      "category": "oracle",
+      "url": "https://www.oracle.com/",
+      "success": true,
+      "time_seconds": 0.37,
+      "html_size": 1496,
+      "extracted_chars": 447,
+      "completeness": 0.667,
+      "score": 1.817
+    }
+  ]
+}
