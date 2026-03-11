@@ -1,127 +1,67 @@
-# Playwright Autoresearch MLX BYOC - ThePenclaw
+# Playwright Autoresearch (BYOC) - ThePenclaw
 
-**BYOC (Bring Your Own Compute) Autoresearch Platform for Apple Silicon**
-
-Zero-cost automated research using cloud LLM agents + local M-series Macs.
+BYOC (Bring Your Own Compute) autoresearch for Playwright scraping experiments on Apple Silicon.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform: macOS](https://img.shields.io/badge/Platform-macOS-blue.svg)](https://www.apple.com/macos/)
-[![Powered by: OpenClaw](https://img.shields.io/badge/Powered%20by-OpenClaw-green.svg)](https://openclaw.ai)
 [![MLX](https://img.shields.io/badge/MLX-Apple%20Silicon-orange.svg)](https://github.com/ml-explore/mlx)
 
----
+## Scope
 
-## What is BYOC Autoresearch?
+This repository is intentionally scoped to Playwright autoresearch only:
+- Playwright scraping optimization loops
+- Repeatable cycle-based benchmarking
+- BYOC execution on local Apple Silicon
 
-**BYOC = Bring Your Own Compute**
+## Current Experiment
 
-A distributed research pattern where:
-- **Cloud LLM Agent** (OpenClaw/Kimi) designs experiments
-- **Local M-series Mac** (your machine) executes experiments  
-- **GitHub** coordinates between them
-- **Result:** Zero cloud compute costs, fully automated research
-
-### The Loop
-
-```
-Cloud LLM (Designs) ←──────→ GitHub ←──────→ M4 Mac (Executes)
-        ↑                      │                  │
-        └──────────────────────┴──────────────────┘
-                    (15 min cycles)
-```
-
----
-
-## Completed Research
-
-| Date | Experiment | Key Finding | Status |
-|------|------------|-------------|--------|
-| 2026-03-10 | [Playwright M4 Optimization](experiments/2026-03-10-playwright-m4-optimization/) | 99% speedup, optimal config found | ✅ Complete |
-
----
+| Date | Experiment | Status | Summary |
+|------|------------|--------|---------|
+| 2026-03-10 | [Playwright M4 Optimization](experiments/2026-03-10-playwright-m4-optimization/) | Complete | 10-cycle baseline optimization and config convergence |
 
 ## Quick Start
 
 ```bash
-# Clone
 git clone https://github.com/thepenclaw/playwright-autoresearch-mlx-byoc-thepenclaw.git
 cd playwright-autoresearch-mlx-byoc-thepenclaw
 
-# See a completed experiment
 cd experiments/2026-03-10-playwright-m4-optimization
-./auto_run.sh  # Or just read the results
+python3 scraper.py
 ```
 
----
+## 10-Cycle Workflow
 
-## Architecture
+Use these docs for repeatable iteration:
+- [10-cycle protocol](docs/PLAYWRIGHT_10_CYCLE_PROTOCOL.md)
+- [report template](docs/PLAYWRIGHT_RESEARCH_REPORT_TEMPLATE.md)
+- [add experiment guide](docs/ADD_EXPERIMENT.md)
 
-See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed system design.
+## Repository Layout
 
-**Key Principle:** Zero additional cost
-- Use hardware you already own (M1/M2/M3/M4 Mac)
-- Open source tools only
-- No API keys needed
-- No cloud compute bills
-
----
-
-## Repository Structure
-
-```
-autoresearch-mlx-byoc-thepenclaw/
-├── README.md                    # This file
-├── LICENSE                      # MIT
-├── ARCHITECTURE.md              # System design
-│
-├── experiments/                 # All research (date-wise)
-│   ├── 2026-03-10-playwright-m4-optimization/
-│   │   ├── README.md
-│   │   ├── scraper.py
-│   │   ├── auto_run.sh
-│   │   ├── program.md
-│   │   ├── RESEARCH_REPORT.md
-│   │   └── results/
-│   └── YYYY-MM-DD-your-experiment/   # Add yours here
-│
-└── docs/                        # Documentation
-    ├── SETUP.md
-    ├── ADD_EXPERIMENT.md
-    └── TROUBLESHOOTING.md
+```text
+playwright-autoresearch-mlx-byoc-thepenclaw/
+├── README.md
+├── ARCHITECTURE.md
+├── docs/
+│   ├── ADD_EXPERIMENT.md
+│   ├── PLAYWRIGHT_10_CYCLE_PROTOCOL.md
+│   └── PLAYWRIGHT_RESEARCH_REPORT_TEMPLATE.md
+└── experiments/
+    └── 2026-03-10-playwright-m4-optimization/
+        ├── scraper.py
+        ├── auto_run.sh
+        ├── program.md
+        ├── RESEARCH_REPORT.md
+        └── results/
 ```
 
-**Date-wise structure** makes it easy to:
-- Track multiple studies
-- Compare results over time
-- Contribute new experiments
-- Reference prior work
+## Principles
 
----
-
-## Credits & Attribution
-
-**Methodology:**  
-[Andrej Karpathy](https://github.com/karpathy) - Autoresearch pattern from nanoGPT experiments
-
-**MLX Framework:**  
-[Apple MLX Team](https://github.com/ml-explore/mlx) - Apple Silicon machine learning framework
-
-**Original MLX Port:**  
-[trevin-creator/autoresearch-mlx](https://github.com/trevin-creator/autoresearch-mlx) - MLX port of Karpathy's autoresearch
-
-**Platform:**  
-[OpenClaw](https://openclaw.ai) - Agent ecosystem, ClawHub skills, built-in LLM
-
-**Developer:**  
-thepenclaw team
-
----
+- Keep test URL sets fixed per experiment.
+- Change one variable class per cycle.
+- Use score-driven decisions (`completeness / time`).
+- Commit each cycle with a clear hypothesis.
 
 ## License
 
-MIT License - See [LICENSE](LICENSE)
-
----
-
-*Last Updated: March 2026*  
-*Status: Active research - accepting new experiments*
+MIT - see [LICENSE](LICENSE).

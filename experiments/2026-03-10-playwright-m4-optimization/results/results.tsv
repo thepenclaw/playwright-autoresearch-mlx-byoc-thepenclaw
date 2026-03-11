@@ -9,3 +9,4 @@ cycle	timestamp	score	avg_time	completeness	config
 8	2026-03-11T00:52:00.915014	0.341	1.97	0.672	{"wait_until": "domcontentloaded", "timeout": 30000, "headless": true, "viewport": {"width": 1280, "height": 720}}
 9	2026-03-11T01:07:31.796942	0.340	1.98	0.672	{"wait_until": "domcontentloaded", "timeout": 60000, "headless": true, "viewport": {"width": 1920, "height": 1080}}
 10	2026-03-11T01:23:01.656667	0.364	1.85	0.672	{"wait_until": "domcontentloaded", "timeout": 60000, "headless": true, "viewport": {"width": 1280, "height": 720}}
+11	2026-03-11T12:42:58.290279	0.312	2.16	0.673	{"wait_until": "domcontentloaded", "timeout": 60000, "headless": true, "viewport": {"width": 1280, "height": 720}, "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.0"}

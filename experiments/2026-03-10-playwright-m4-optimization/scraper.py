@@ -39,6 +39,9 @@ TEST_URLS = [
     ("blog", "https://blog.mozilla.org/en/mozilla/"),
 ]
 
+RESULTS_DIR = "results"
+TSV_PATH = f"{RESULTS_DIR}/results.tsv"
+
 # =============================================================================
 # SCRAPING FUNCTIONS
 # =============================================================================
@@ -190,13 +193,13 @@ def run_experiment():
     print(f"TOTAL SCORE: {total_score:.3f}")
     
     # Save results
-    cycle_num = len([f for f in __import__('os').listdir('results') if f.startswith('cycle_')]) + 1
-    
-    with open(f"results/cycle_{cycle_num:02d}.json", "w") as f:
+    cycle_num = len([f for f in __import__('os').listdir(RESULTS_DIR) if f.startswith('cycle_')]) + 1
+
+    with open(f"{RESULTS_DIR}/cycle_{cycle_num:02d}.json", "w") as f:
         json.dump(summary, f, indent=2)
-    
+
     # Append to TSV
-    with open("results.tsv", "a") as f:
+    with open(TSV_PATH, "a") as f:
         if cycle_num == 1:
             f.write("cycle\ttimestamp\tscore\tavg_time\tcompleteness\tconfig\n")
         config_str = json.dumps(CONFIG)
@@ -210,5 +213,5 @@ def run_experiment():
 
 if __name__ == "__main__":
     import os
-    os.makedirs("results", exist_ok=True)
+    os.makedirs(RESULTS_DIR, exist_ok=True)
     run_experiment()

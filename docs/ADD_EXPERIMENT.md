@@ -1,35 +1,38 @@
-# How to Add Your Own Experiment
+# Add a New Playwright Experiment
 
-## Quick Start
+## 1. Create a dated folder
 
-1. **Create folder with date prefix:**
-   ```bash
-   mkdir experiments/YYYY-MM-DD-your-experiment-name
-   cd experiments/YYYY-MM-DD-your-experiment-name
-   ```
+```bash
+mkdir -p experiments/YYYY-MM-DD-your-experiment
+cd experiments/YYYY-MM-DD-your-experiment
+```
 
-2. **Create these files:**
-   - `run.py` - Your experiment code (LLM edits CONFIG section)
-   - `program.md` - Instructions for LLM agent
-   - `auto_run.sh` - Automation script
-   - `README.md` - Documentation
+## 2. Add required files
 
-3. **Commit and push:**
-   ```bash
-   git add .
-   git commit -m "New experiment: your-experiment-name"
-   git push origin main
-   ```
+- `scraper.py`: executable benchmark and scoring logic.
+- `program.md`: agent mutation boundaries and objective.
+- `auto_run.sh`: loop runner for multi-cycle execution.
+- `RESEARCH_REPORT.md`: final write-up.
+- `results/`: cycle JSON outputs.
+- `results.tsv`: cycle summary table.
 
-4. **Run on your Mac:**
-   ```bash
-   ./auto_run.sh
-   ```
+## 3. Reuse protocol and template
 
-## File Templates
+- Copy process from `docs/PLAYWRIGHT_10_CYCLE_PROTOCOL.md`.
+- Start report from `docs/PLAYWRIGHT_RESEARCH_REPORT_TEMPLATE.md`.
 
-See existing experiments for examples.
+## 4. Validate locally
 
----
+```bash
+python3 scraper.py
+```
 
-*More docs coming soon*
+Ensure one cycle runs successfully before starting automated loops.
+
+## 5. Commit and push
+
+```bash
+git add .
+git commit -m "Add experiment: YYYY-MM-DD-your-experiment"
+git push origin main
+```
