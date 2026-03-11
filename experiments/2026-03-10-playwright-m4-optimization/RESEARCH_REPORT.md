@@ -140,6 +140,16 @@ CONFIG = {
 
 ---
 
+## Validation Follow-Up
+
+Two extra validation cycles (11 and 12) reran the final configuration to check for drift:
+ - Cycle 11 (2026-03-11T12:42:58) used the same `domcontentloaded/60s/headless` setup, scored 0.312 with avg time 2.16s, and documented the expected Stripe docs latency bump (~9s) that nudged the score downward.
+ - Cycle 12 (2026-03-11T13:36:49) reprised the config, scored 0.283 at 2.37s avg time, and again showed Stripe as the slowest URL (11.7s). Completion stayed at ~67.3% for both runs.
+
+Score fluctuations settled into the 0.28-0.31 band while completeness remained constant, so the architecture remains reproducible and the chosen configuration still performs best despite transient site latency.
+
+---
+
 ## Recommendations
 
 **For M4 Mac Web Scraping:**
