@@ -31,9 +31,7 @@ You can modify how content is extracted:
 - Add custom extraction logic
 - Modify preprocessing
 
-## What You CANNOT Modify
-
-- **`TEST_URLS`** - Fixed set of 10 URLs (static + JS-heavy mix)
+- **`WEBSITE_CORPUS`** - Fixed set of 100 URLs, 10 per cycle (use `--cycle` to select).
 - **Evaluation function** - How completeness is measured
 - **`prepare.py`** - Data preparation (if exists)
 - **Test URL list** - Must remain constant for fair comparison
@@ -44,6 +42,7 @@ You can modify how content is extracted:
 2. **Hypothesis-driven** - Have a reason for each change
 3. **Document in commit** - Explain what you changed and why
 4. **Revert if worse** - If score drops, try opposite direction
+5. **Cycle awareness** - Run `python3 scraper.py --cycle N` to capture each 10-site batch; the automation script already loops through `N=1..10`.
 
 ## Test URLs (Fixed)
 

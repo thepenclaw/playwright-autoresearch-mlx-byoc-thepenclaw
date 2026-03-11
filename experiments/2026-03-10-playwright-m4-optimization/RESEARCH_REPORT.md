@@ -111,21 +111,16 @@ CONFIG = {
 - GitHub as coordination layer
 - 15-minute automated cycles
 
-**Test URLs (10 diverse sites):**
-1. docs.python.org (static)
-2. react.dev (React SPA)
-3. news.ycombinator.com (forum)
-4. notion.com (productivity SPA)
-5. shopify.com (ecommerce)
-6. vuejs.org (Vue docs)
-7. reddit.com (social)
-8. stripe.com/docs (API docs)
-9. github.com/torvalds/linux (code)
-10. blog.mozilla.org (blog)
+**Test URLs (100-site corpus):**
+- The scraper now cycles through 100 curated websites (10 per cycle) so each run measures a diverse mix of documentation, commerce, AI research, and OpenClaw-context pages. See `experiments/2026-03-10-playwright-m4-optimization/scraper.py` for the full list.
 
 **Metric:** `score = completeness / time`
 - completeness: extracted_chars / estimated_full_content (0-1)
 - time: seconds to scrape
+
+## OpenClaw Context
+
+The broadened corpus deliberately includes OpenClaw signals (`openclaw.ai`, AI research archives, Stripe docs) so that the documented memory and context issues show up in a reproducible way. Every cycle runs headless desktop Playwright inside the `domcontentloaded` timing window to mirror the memory-conscious agents discussed in `docs/OPENCLAW_MEMORY_CONTEXT.md`.
 
 ---
 

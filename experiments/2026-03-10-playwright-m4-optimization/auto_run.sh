@@ -43,8 +43,8 @@ for i in {1..10}; do
     git pull origin main
     
     # Run experiment
-    echo "Running scraper.py..."
-    python3 scraper.py
+    echo "Running scraper.py (cycle $i)..."
+    python3 scraper.py --cycle "$i"
     
     # Push results
     echo "Pushing results..."

@@ -36,6 +36,12 @@ Use these docs for repeatable iteration:
 - [report template](docs/PLAYWRIGHT_RESEARCH_REPORT_TEMPLATE.md)
 - [add experiment guide](docs/ADD_EXPERIMENT.md)
 
+The current cycle plan covers **100 unique websites** (10 per cycle). Each cycle runs every 15 minutes with the same desktop-focused Playwright config, so the agent observes performance variability across a wide spectrum of content, including OpenClaw memory/context discussions documented below.
+
+## OpenClaw Context & Memory
+
+The experiment also captures OpenClaw-relevant signal (memory pressure via `openclaw.ai`, latency `openai.com`, and related research links). See [docs/OPENCLAW_MEMORY_CONTEXT.md](docs/OPENCLAW_MEMORY_CONTEXT.md) for the issues we monitor and suggested mitigation strategies.
+
 ## Repository Layout
 
 ```text

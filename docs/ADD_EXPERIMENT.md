@@ -28,6 +28,7 @@ python3 scraper.py
 ```
 
 Ensure one cycle runs successfully before starting automated loops.
+The prefab `scraper.py` already divides the 100-site corpus into 10-cycle batches; reuse or extend `WEBSITE_CORPUS` carefully so each cycle stays within 10 URLs (desktop, headless, `domcontentloaded`).
 
 ## 5. Commit and push
 

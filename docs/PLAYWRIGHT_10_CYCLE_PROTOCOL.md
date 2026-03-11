@@ -10,6 +10,8 @@ Provide a repeatable loop to optimize Playwright scraping config while keeping m
 - `playwright`, `trafilatura`, `requests` installed.
 - Experiment folder contains fixed URL corpus and score logic.
 
+Each run iterates through a predetermined corpus of **100 websites**, with `scraper.py --cycle <1-10>` picking 10 sites per cycle. This keeps the Workloads consistent, desktop-only, and easy to track in the OpenClaw memory/context log (see `docs/OPENCLAW_MEMORY_CONTEXT.md` for the reasoning).
+
 ## Cycle Rules
 
 - Run exactly 10 cycles.
